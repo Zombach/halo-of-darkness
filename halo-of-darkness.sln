@@ -1,0 +1,89 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35617.110
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDA3}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.markdownlint.json = .markdownlint.json
+		.markdownlintignore = .markdownlintignore
+		Readme.md = Readme.md
+		spelling.dic = spelling.dic
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDA4}"
+	ProjectSection(SolutionItems) = preProject
+		.github\dependabot.yml = .github\dependabot.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDA5}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build-and-test.yml = .github\workflows\build-and-test.yml
+		.github\workflows\markdownlint-problem-matcher.json = .github\workflows\markdownlint-problem-matcher.json
+		.github\workflows\markdownlint.yml = .github\workflows\markdownlint.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "clients", "clients", "{36D591C7-65C7-A0D1-1CBC-10CDE441BCC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{E431C0EF-0A07-9D2C-3EA9-2C750D5184D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "servers", "servers", "{CC80CF82-095A-9A70-E4AA-4F39E72E717A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halo-of-darkness-server", "src\servers\halo-of-darkness-server\halo-of-darkness-server.csproj", "{A0A780A0-5B17-439E-8A37-339F021206B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shareds", "shareds", "{61841393-3188-E9D6-B5C2-EFF3A07DA07F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "clients", "clients", "{4C762EA4-0E13-740B-DC3E-658682866858}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{0515A935-E54F-E1B5-8367-F3320845F850}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "servers", "servers", "{36D591C7-65C7-A0D1-1CBC-10CDE441ADC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shareds", "shareds", "{36D591C7-65C7-A0D1-1CBC-10CDE441AAC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unity-libs", "unity-libs", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "grpc", "libs\grpc-libs\grpc.csproj", "{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0A780A0-5B17-439E-8A37-339F021206B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0A780A0-5B17-439E-8A37-339F021206B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0A780A0-5B17-439E-8A37-339F021206B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0A780A0-5B17-439E-8A37-339F021206B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{36D591C7-65C7-A0D1-1CBC-10CDE441BDA4} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDA3}
+		{36D591C7-65C7-A0D1-1CBC-10CDE441BDA5} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDA4}
+		{36D591C7-65C7-A0D1-1CBC-10CDE441BCC8} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{E431C0EF-0A07-9D2C-3EA9-2C750D5184D2} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{CC80CF82-095A-9A70-E4AA-4F39E72E717A} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{A0A780A0-5B17-439E-8A37-339F021206B3} = {CC80CF82-095A-9A70-E4AA-4F39E72E717A}
+		{61841393-3188-E9D6-B5C2-EFF3A07DA07F} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{4C762EA4-0E13-740B-DC3E-658682866858} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}
+		{0515A935-E54F-E1B5-8367-F3320845F850} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}
+		{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC0}
+		{36D591C7-65C7-A0D1-1CBC-10CDE441ADC8} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}
+		{36D591C7-65C7-A0D1-1CBC-10CDE441AAC8} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B847B5A-FFF3-4059-8B39-FA5F565B5430}
+	EndGlobalSection
+EndGlobal
