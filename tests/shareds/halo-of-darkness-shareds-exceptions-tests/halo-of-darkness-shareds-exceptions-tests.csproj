@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <RootNamespace>HaloOfDarkness.Libs.Exceptions.Tests</RootNamespace>
+    <RootNamespace>HaloOfDarkness.Shareds.Exceptions.Tests</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\libs\halo-of-darkness-libs-exceptions\halo-of-darkness-libs-exceptions.csproj" />
+    <ProjectReference Include="..\..\..\src\shareds\halo-of-darkness-shareds-exceptions\halo-of-darkness-shareds-exceptions.csproj" />
   </ItemGroup>
 
   <ItemGroup>

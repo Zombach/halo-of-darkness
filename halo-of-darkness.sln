@@ -30,31 +30,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "clients", "clients", "{36D5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{E431C0EF-0A07-9D2C-3EA9-2C750D5184D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halo-of-darkness-libs-exceptions", "src\libs\halo-of-darkness-libs-exceptions\halo-of-darkness-libs-exceptions.csproj", "{5B318AD5-C1CD-42C6-A464-E38E8AD4B274}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "servers", "servers", "{CC80CF82-095A-9A70-E4AA-4F39E72E717A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halo-of-darkness-server", "src\servers\halo-of-darkness-server\halo-of-darkness-server.csproj", "{8BFCC2C4-2889-4BD5-B5A3-D32FE603146A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halo-of-darkness-server-configuration", "src\servers\halo-of-darkness-server-configuration\halo-of-darkness-server-configuration.csproj", "{AF995500-80E4-49CD-AA29-267CC819308B}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shareds", "shareds", "{61841393-3188-E9D6-B5C2-EFF3A07DA07F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halo-of-darkness-shareds-exceptions", "src\shareds\halo-of-darkness-shareds-exceptions\halo-of-darkness-shareds-exceptions.csproj", "{5B318AD5-C1CD-42C6-A464-E38E8AD4B274}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "clients", "clients", "{4C762EA4-0E13-740B-DC3E-658682866858}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{0515A935-E54F-E1B5-8367-F3320845F850}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halo-of-darkness-libs-exceptions-tests", "tests\libs\halo-of-darkness-libs-exceptions-tests\halo-of-darkness-libs-exceptions-tests.csproj", "{CD943F89-D13A-49A3-8159-2D725268FE9F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "servers", "servers", "{36D591C7-65C7-A0D1-1CBC-10CDE441ADC8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shareds", "shareds", "{36D591C7-65C7-A0D1-1CBC-10CDE441AAC8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shareds", "shareds", "{36D591C7-65C7-A0D1-1CBC-10CDE441AFC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halo-of-darkness-shareds-exceptions-tests", "tests\shareds\halo-of-darkness-shareds-exceptions-tests\halo-of-darkness-shareds-exceptions-tests.csproj", "{CD943F89-D13A-49A3-8159-2D725268FE9F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unity-libs", "unity-libs", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "grpc", "libs\grpc-libs\grpc.csproj", "{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halo-of-darkness-libs-configuration", "src\libs\halo-of-darkness-libs-configuration\halo-of-darkness-libs-configuration.csproj", "{AF995500-80E4-49CD-AA29-267CC819308B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "grpc-libs", "unity-libs\grpc-libs\grpc-libs.csproj", "{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,14 +60,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5B318AD5-C1CD-42C6-A464-E38E8AD4B274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B318AD5-C1CD-42C6-A464-E38E8AD4B274}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B318AD5-C1CD-42C6-A464-E38E8AD4B274}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B318AD5-C1CD-42C6-A464-E38E8AD4B274}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8BFCC2C4-2889-4BD5-B5A3-D32FE603146A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8BFCC2C4-2889-4BD5-B5A3-D32FE603146A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BFCC2C4-2889-4BD5-B5A3-D32FE603146A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BFCC2C4-2889-4BD5-B5A3-D32FE603146A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF995500-80E4-49CD-AA29-267CC819308B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF995500-80E4-49CD-AA29-267CC819308B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF995500-80E4-49CD-AA29-267CC819308B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF995500-80E4-49CD-AA29-267CC819308B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B318AD5-C1CD-42C6-A464-E38E8AD4B274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B318AD5-C1CD-42C6-A464-E38E8AD4B274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B318AD5-C1CD-42C6-A464-E38E8AD4B274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B318AD5-C1CD-42C6-A464-E38E8AD4B274}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CD943F89-D13A-49A3-8159-2D725268FE9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CD943F89-D13A-49A3-8159-2D725268FE9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD943F89-D13A-49A3-8159-2D725268FE9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -78,10 +80,6 @@ Global
 		{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF995500-80E4-49CD-AA29-267CC819308B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF995500-80E4-49CD-AA29-267CC819308B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF995500-80E4-49CD-AA29-267CC819308B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF995500-80E4-49CD-AA29-267CC819308B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,17 +89,16 @@ Global
 		{36D591C7-65C7-A0D1-1CBC-10CDE441BDA5} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDA4}
 		{36D591C7-65C7-A0D1-1CBC-10CDE441BCC8} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{E431C0EF-0A07-9D2C-3EA9-2C750D5184D2} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
-		{5B318AD5-C1CD-42C6-A464-E38E8AD4B274} = {E431C0EF-0A07-9D2C-3EA9-2C750D5184D2}
 		{CC80CF82-095A-9A70-E4AA-4F39E72E717A} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{8BFCC2C4-2889-4BD5-B5A3-D32FE603146A} = {CC80CF82-095A-9A70-E4AA-4F39E72E717A}
+		{AF995500-80E4-49CD-AA29-267CC819308B} = {CC80CF82-095A-9A70-E4AA-4F39E72E717A}
 		{61841393-3188-E9D6-B5C2-EFF3A07DA07F} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{5B318AD5-C1CD-42C6-A464-E38E8AD4B274} = {61841393-3188-E9D6-B5C2-EFF3A07DA07F}
 		{4C762EA4-0E13-740B-DC3E-658682866858} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}
-		{0515A935-E54F-E1B5-8367-F3320845F850} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}
-		{CD943F89-D13A-49A3-8159-2D725268FE9F} = {0515A935-E54F-E1B5-8367-F3320845F850}
 		{36D591C7-65C7-A0D1-1CBC-10CDE441ADC8} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}
-		{36D591C7-65C7-A0D1-1CBC-10CDE441AAC8} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}
+		{36D591C7-65C7-A0D1-1CBC-10CDE441AFC8} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}
+		{CD943F89-D13A-49A3-8159-2D725268FE9F} = {36D591C7-65C7-A0D1-1CBC-10CDE441AFC8}
 		{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC0}
-		{AF995500-80E4-49CD-AA29-267CC819308B} = {E431C0EF-0A07-9D2C-3EA9-2C750D5184D2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1B847B5A-FFF3-4059-8B39-FA5F565B5430}

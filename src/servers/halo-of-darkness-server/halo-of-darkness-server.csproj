@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\libs\halo-of-darkness-libs-configuration\halo-of-darkness-libs-configuration.csproj" />
-    <ProjectReference Include="..\..\libs\halo-of-darkness-libs-exceptions\halo-of-darkness-libs-exceptions.csproj" />
+    <ProjectReference Include="..\..\shareds\halo-of-darkness-shareds-exceptions\halo-of-darkness-shareds-exceptions.csproj" />
+    <ProjectReference Include="..\halo-of-darkness-server-configuration\halo-of-darkness-server-configuration.csproj" />
   </ItemGroup>
 
 </Project>
