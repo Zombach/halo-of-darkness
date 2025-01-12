@@ -3,7 +3,7 @@ using System.Text;
 
 namespace HaloOfDarkness.Server.Middlewares;
 
-public class RequestLoggingMiddleware(ILogger<RequestLoggingMiddleware> logger)
+internal sealed class RequestLoggingMiddleware(ILogger<RequestLoggingMiddleware> logger)
     : IMiddleware
 {
     public async Task InvokeAsync(HttpContext context, RequestDelegate next)

@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace HaloOfDarkness.Server.Configuration;
 
-public static class ConfigurationConfigure
+internal static class ConfigurationConfigure
 {
     public static ConfigurationManager AddConfiguration
     (

@@ -2,7 +2,7 @@ using HaloOfDarkness.Server.Options;
 
 namespace HaloOfDarkness.Server.Configuration;
 
-public static class OptionsConfigure
+internal static class OptionsConfigure
 {
     public static IServiceCollection AddOptions
     (

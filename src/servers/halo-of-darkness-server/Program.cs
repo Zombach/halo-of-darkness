@@ -29,6 +29,7 @@ try
 
     var services = builder.Services;
 
+    services.AddOptions(configuration);
     services.AddMiddlewares();
     services.AddSwaggerGen();
     services.AddRouting(options => options.LowercaseUrls = true);

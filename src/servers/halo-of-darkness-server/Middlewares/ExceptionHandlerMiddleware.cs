@@ -1,11 +1,12 @@
-using System.Net;
 using System.Text.Encodings.Web;
 using System.Text.Json;
-using HaloOfDarkness.Server.Exceptions;
+using HaloOfDarkness.Libs.Exceptions;
+using HaloOfDarkness.Libs.Exceptions.Common;
+using InvalidOperationException = HaloOfDarkness.Libs.Exceptions.InvalidOperationException;
 
 namespace HaloOfDarkness.Server.Middlewares;
 
-public class ExceptionHandlerMiddleware(ILogger<ExceptionHandlerMiddleware> logger)
+internal sealed class ExceptionHandlerMiddleware(ILogger<ExceptionHandlerMiddleware> logger)
     : IMiddleware
 {
     private static readonly JsonSerializerOptions s_jsonSerializerOptions = new()
@@ -20,36 +21,67 @@ public class ExceptionHandlerMiddleware(ILogger<ExceptionHandlerMiddleware> logg
         {
             await next.Invoke(context);
         }
-        catch (ForbiddenException exception)
-        {
-            await HandleExceptionMessageAsync(context, exception, HttpStatusCode.Forbidden).ConfigureAwait(false);
-        }
         catch (BadRequestException exception)
         {
-            await HandleExceptionMessageAsync(context, exception, HttpStatusCode.BadRequest).ConfigureAwait(false);
+            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+        }
+        catch (ForbiddenException exception)
+        {
+            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+        }
+        catch (InternalServerErrorException exception)
+        {
+            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+        }
+        catch (InvalidOperationException exception)
+        {
+            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+        }
+        catch (NotFoundException exception)
+        {
+            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+        }
+        catch (OriginIsUnreachableException exception)
+        {
+            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
         }
         catch (RequestTimeOutException exception)
         {
-            await HandleExceptionMessageAsync(context, exception, HttpStatusCode.RequestTimeout).ConfigureAwait(false);
+            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+        }
+        catch (ServiceUnavailableException exception)
+        {
+            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+        }
+        catch (UnauthorizedException exception)
+        {
+            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+        }
+        catch (UnprocessableEntityException exception)
+        {
+            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+        }
+        catch (ValidationException exception)
+        {
+            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
         }
         catch (Exception exception)
         {
-            await HandleExceptionMessageAsync(context, exception, HttpStatusCode.InternalServerError).ConfigureAwait(false);
+            await HandleExceptionMessageAsync(context, new InternalServerErrorException(exception.Message, exception)).ConfigureAwait(false);
         }
     }
 
-    private Task HandleExceptionMessageAsync(HttpContext context, Exception exception, HttpStatusCode code)
+    private Task HandleExceptionMessageAsync(HttpContext context, BaseException exception)
     {
         logger.LogError(exception, "StatusCode: {@statusCode} Message: {@message}",
-            code,
+            exception.RequestStatusCode,
             exception.Message);
 
-        var statusCode = (int)code;
         var result = JsonSerializer.Serialize(
-            new { StatusCode = statusCode, ErrorMessage = exception.Message },
+            new { StatusCode = exception.RequestStatusCode, ErrorMessage = exception.Message },
             s_jsonSerializerOptions);
         context.Response.ContentType = "application/json";
-        context.Response.StatusCode = statusCode;
+        context.Response.StatusCode = exception.RequestStatusCode;
         return context.Response.WriteAsync(result);
     }
 }

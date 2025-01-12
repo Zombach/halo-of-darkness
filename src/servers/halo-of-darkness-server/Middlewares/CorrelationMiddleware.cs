@@ -1,13 +1,17 @@
-using HaloOfDarkness.Server.Extensions;
 using Serilog.Context;
 
 namespace HaloOfDarkness.Server.Middlewares;
 
 internal sealed class CorrelationMiddleware : IMiddleware
 {
+    private const string CorrelationId = nameof(CorrelationId);
+
     public async Task InvokeAsync(HttpContext context, RequestDelegate next)
     {
-        using (LogContext.PushProperty("CorrelationId", context.CreateCorrelationId()))
+        var correlationId = Guid.NewGuid();
+        context.Request.Headers.Append(CorrelationId, correlationId.ToString());
+
+        using (LogContext.PushProperty(CorrelationId, correlationId))
         {
             await next.Invoke(context);
         }
