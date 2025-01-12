@@ -1,8 +1,6 @@
-using System.Globalization;
 using System.Text;
+using HaloOfDarkness.Libs.Configuration;
 using HaloOfDarkness.Server.Configuration;
-using Serilog;
-using Serilog.Events;
 using ILogger = Serilog.ILogger;
 
 ILogger? logger = default;
@@ -17,22 +15,19 @@ try
 
     var builder = WebApplication.CreateBuilder(args);
 
-    var configuration = builder.Configuration;
-    configuration.AddConfiguration(environment);
+    builder.Configuration.AddConfiguration(environment);
 
-    var loggingBuilder = builder.Logging;
-    loggingBuilder.ClearProviders();
-    logger = loggingBuilder.AddLoggers(configuration, "LogDefault")
-        .ForContext<Program>();
+    builder.AddLoggers(out var defaultLogger, "LogDefault");
+    logger = defaultLogger.ForContext<Program>();
 
     logger.Information("environment: {@environment}", environment);
 
     var services = builder.Services;
 
-    services.AddOptions(configuration);
+    services.AddOptions(builder.Configuration);
     services.AddMiddlewares();
-    services.AddSwaggerGen();
     services.AddRouting(options => options.LowercaseUrls = true);
+    services.AddSwaggerGen();
     services.AddControllers();
 
     var app = builder.Build();
@@ -45,11 +40,8 @@ try
 }
 catch (Exception exception)
 {
-    logger ??= new LoggerConfiguration()
-        .WriteTo.Console(
-            LogEventLevel.Debug,
-            formatProvider: new CultureInfo(CultureInfo.CurrentCulture.Name))
-        .CreateLogger()
+    logger ??= LoggingConfiguration
+        .CreateDefaultLogger()
         .ForContext<Program>();
 
     logger.Fatal(
@@ -59,5 +51,5 @@ catch (Exception exception)
 }
 finally
 {
-    logger?.Information("finish");
+    logger!.Information("finish");
 }

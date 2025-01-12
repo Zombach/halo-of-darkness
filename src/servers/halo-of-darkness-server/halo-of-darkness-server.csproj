@@ -28,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\libs\halo-of-darkness-libs-configuration\halo-of-darkness-libs-configuration.csproj" />
     <ProjectReference Include="..\..\libs\halo-of-darkness-libs-exceptions\halo-of-darkness-libs-exceptions.csproj" />
   </ItemGroup>
 

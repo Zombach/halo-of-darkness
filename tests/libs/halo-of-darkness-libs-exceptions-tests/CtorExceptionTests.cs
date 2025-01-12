@@ -1,4 +1,4 @@
-using System.Net;
+    using System.Net;
 using FluentAssertions;
 using HaloOfDarkness.Libs.Exceptions.Common;
 using HaloOfDarkness.Libs.Exceptions.Tests.Configuration;
@@ -152,6 +152,6 @@ public sealed class CtorExceptionTests
         exceptionWithMessageAndInnerException.RequestStatusCode.Should().Be(statusCode);
         exceptionWithMessageAndInnerException.Message.Should().Be(message);
         exceptionWithMessageAndInnerException.InnerException.Should().Be(innerException);
-        exceptionWithMessageAndInnerException.InnerException.Message.Should().Be(innerException.Message);
+        exceptionWithMessageAndInnerException.InnerException?.Message.Should().Be(innerException.Message);
     }
 }
