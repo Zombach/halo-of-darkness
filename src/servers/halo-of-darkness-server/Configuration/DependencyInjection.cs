@@ -1,6 +1,5 @@
 using System.Globalization;
-using HaloOfDarkness.Libs.Configuration;
-using HaloOfDarkness.Server.Middlewares;
+using HaloOfDarkness.Server.Middleware;
 using HaloOfDarkness.Server.Options;
 using Serilog;
 using ILogger = Serilog.ILogger;
@@ -81,7 +80,7 @@ internal static class DependencyInjection
         return services;
     }
 
-    public static WebApplication UseMiddlewares(this WebApplication application)
+    public static WebApplication UseMiddleware(this WebApplication application)
     {
         application.UseMiddleware<CorrelationMiddleware>();
         application.UseMiddleware<ExceptionHandlerMiddleware>();

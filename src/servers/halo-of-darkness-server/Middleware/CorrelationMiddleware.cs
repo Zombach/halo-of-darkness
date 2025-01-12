@@ -1,6 +1,6 @@
 using Serilog.Context;
 
-namespace HaloOfDarkness.Server.Middlewares;
+namespace HaloOfDarkness.Server.Middleware;
 
 internal sealed class CorrelationMiddleware : IMiddleware
 {

@@ -1,10 +1,10 @@
 using System.Text.Encodings.Web;
 using System.Text.Json;
-using HaloOfDarkness.Libs.Exceptions;
-using HaloOfDarkness.Libs.Exceptions.Common;
-using InvalidOperationException = HaloOfDarkness.Libs.Exceptions.InvalidOperationException;
+using HaloOfDarkness.Shared.Exceptions;
+using HaloOfDarkness.Shared.Exceptions.Common;
+using InvalidOperationException = HaloOfDarkness.Shared.Exceptions.InvalidOperationException;
 
-namespace HaloOfDarkness.Server.Middlewares;
+namespace HaloOfDarkness.Server.Middleware;
 
 internal sealed class ExceptionHandlerMiddleware(ILogger<ExceptionHandlerMiddleware> logger)
     : IMiddleware

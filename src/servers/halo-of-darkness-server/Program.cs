@@ -1,5 +1,4 @@
 using System.Text;
-using HaloOfDarkness.Libs.Configuration;
 using HaloOfDarkness.Server.Configuration;
 using ILogger = Serilog.ILogger;
 
@@ -31,7 +30,7 @@ try
     services.AddControllers();
 
     var app = builder.Build();
-    app.UseMiddlewares();
+    app.UseMiddleware();
 
     app.MapControllers();
     app.UseSwagger();

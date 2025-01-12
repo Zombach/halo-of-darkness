@@ -5,7 +5,7 @@ using Serilog.Events;
 using Serilog.Settings.Configuration;
 using ILogger = Serilog.ILogger;
 
-namespace HaloOfDarkness.Libs.Configuration;
+namespace HaloOfDarkness.Server.Configuration;
 
 public static class LoggingConfiguration
 {

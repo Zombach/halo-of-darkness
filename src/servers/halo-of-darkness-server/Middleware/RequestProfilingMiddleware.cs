@@ -2,7 +2,7 @@ using System.Diagnostics;
 using HaloOfDarkness.Server.Options;
 using Microsoft.Extensions.Options;
 
-namespace HaloOfDarkness.Server.Middlewares;
+namespace HaloOfDarkness.Server.Middleware;
 
 internal sealed class RequestProfilingMiddleware(
     ILogger<RequestProfilingMiddleware> logger,

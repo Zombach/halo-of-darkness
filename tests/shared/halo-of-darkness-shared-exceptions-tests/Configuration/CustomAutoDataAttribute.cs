@@ -1,7 +1,7 @@
 using AutoFixture;
 using AutoFixture.Xunit2;
 
-namespace HaloOfDarkness.Libs.Exceptions.Tests.Configuration;
+namespace HaloOfDarkness.Shared.Exceptions.Tests.Configuration;
 
 public sealed class CustomAutoDataAttribute
     : AutoDataAttribute

@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HaloOfDarkness.Libs.Configuration;
+namespace HaloOfDarkness.Server.Configuration;
 
 public static class OptionsConfigure
 {

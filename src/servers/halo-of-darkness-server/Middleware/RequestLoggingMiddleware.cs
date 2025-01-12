@@ -1,7 +1,7 @@
 using System.Globalization;
 using System.Text;
 
-namespace HaloOfDarkness.Server.Middlewares;
+namespace HaloOfDarkness.Server.Middleware;
 
 internal sealed class RequestLoggingMiddleware(ILogger<RequestLoggingMiddleware> logger)
     : IMiddleware

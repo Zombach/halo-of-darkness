@@ -1,8 +1,8 @@
 using System;
 using System.Net;
-using HaloOfDarkness.Libs.Exceptions.Common;
+using HaloOfDarkness.Shared.Exceptions.Common;
 
-namespace HaloOfDarkness.Libs.Exceptions;
+namespace HaloOfDarkness.Shared.Exceptions;
 
 public sealed class InternalServerErrorException
     : BaseException

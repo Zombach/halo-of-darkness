@@ -1,9 +1,9 @@
 using System.Net;
 using FluentAssertions;
-using HaloOfDarkness.Libs.Exceptions.Common;
-using HaloOfDarkness.Libs.Exceptions.Tests.Configuration;
+using HaloOfDarkness.Shared.Exceptions.Common;
+using HaloOfDarkness.Shared.Exceptions.Tests.Configuration;
 
-namespace HaloOfDarkness.Libs.Exceptions.Tests;
+namespace HaloOfDarkness.Shared.Exceptions.Tests;
 
 public sealed class CtorExceptionTests
 {

@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 
-namespace HaloOfDarkness.Libs.Configuration;
+namespace HaloOfDarkness.Server.Configuration;
 
 public static class ConfigurationConfigure
 {

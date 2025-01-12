@@ -1,6 +1,6 @@
 using System;
 
-namespace HaloOfDarkness.Libs.Exceptions.Common;
+namespace HaloOfDarkness.Shared.Exceptions.Common;
 
 public abstract class BaseException
     : Exception
