@@ -27,10 +27,16 @@ try
 
     logger.Information("environment: {@environment}", environment);
 
-    builder.Services.AddSwaggerGen();
-    builder.Services.AddControllers();
+    var services = builder.Services;
+
+    services.AddMiddlewares();
+    services.AddSwaggerGen();
+    services.AddRouting(options => options.LowercaseUrls = true);
+    services.AddControllers();
 
     var app = builder.Build();
+    app.UseMiddlewares();
+
     app.MapControllers();
     app.UseSwagger();
     app.UseSwaggerUI();
