@@ -24,9 +24,13 @@ public static class LoggingConfiguration
     }
 
     public static ILogger CreateDefaultLogger()
-        => new LoggerConfiguration()
+    {
+        var logger = new LoggerConfiguration()
             .WriteTo.Console(
                 LogEventLevel.Debug,
                 formatProvider: new CultureInfo(CultureInfo.CurrentCulture.Name))
             .CreateBootstrapLogger();
+
+        return logger;
+    }
 }

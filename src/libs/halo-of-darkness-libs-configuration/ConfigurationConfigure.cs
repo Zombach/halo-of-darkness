@@ -10,13 +10,13 @@ public static class ConfigurationConfigure
         bool optional = false,
         bool reloadOnChange = false)
     {
-        var configurationBuilder = configuration.AddJsonFile
+        configuration.AddJsonFile
         (
             appSettingsPath,
             optional: optional,
             reloadOnChange: reloadOnChange
         );
 
-        return configurationBuilder;
+        return configuration;
     }
 }

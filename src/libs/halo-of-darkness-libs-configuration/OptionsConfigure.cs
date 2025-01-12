@@ -5,7 +5,7 @@ namespace HaloOfDarkness.Libs.Configuration;
 
 public static class OptionsConfigure
 {
-    public static void AddOptionsWithValidate<TOptions>(
+    public static IServiceCollection AddOptionsWithValidate<TOptions>(
         this IServiceCollection services,
         IConfigurationSection configurationSection)
         where TOptions : class
@@ -13,5 +13,7 @@ public static class OptionsConfigure
         services.AddOptionsWithValidateOnStart<TOptions>()
             .Bind(configurationSection)
             .ValidateDataAnnotations();
+
+        return services;
     }
 }

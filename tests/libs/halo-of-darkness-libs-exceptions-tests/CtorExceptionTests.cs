@@ -1,4 +1,4 @@
-    using System.Net;
+using System.Net;
 using FluentAssertions;
 using HaloOfDarkness.Libs.Exceptions.Common;
 using HaloOfDarkness.Libs.Exceptions.Tests.Configuration;
