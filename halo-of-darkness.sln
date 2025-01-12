@@ -38,6 +38,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{618413
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halo-of-darkness-shared-exceptions", "src\shared\halo-of-darkness-shared-exceptions\halo-of-darkness-shared-exceptions.csproj", "{5B318AD5-C1CD-42C6-A464-E38E8AD4B274}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halo-of-darkness-shared-grpc-protos", "src\shared\halo-of-darkness-shared-grpc-protos\halo-of-darkness-shared-grpc-protos.csproj", "{27CA4A0F-DE8C-4AC9-9A3D-7EDD326C6704}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "clients", "clients", "{4C762EA4-0E13-740B-DC3E-658682866858}"
@@ -51,6 +53,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unity-libs", "unity-libs", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "grpc-libs", "unity-libs\grpc-libs\grpc-libs.csproj", "{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halo-of-darkness-server-infrastructure", "src\servers\halo-of-darkness-server-infrastructure\halo-of-darkness-server-infrastructure.csproj", "{4A94A900-5BAF-4518-87C4-CF424BF1E11C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,6 +74,10 @@ Global
 		{5B318AD5-C1CD-42C6-A464-E38E8AD4B274}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B318AD5-C1CD-42C6-A464-E38E8AD4B274}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B318AD5-C1CD-42C6-A464-E38E8AD4B274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27CA4A0F-DE8C-4AC9-9A3D-7EDD326C6704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CA4A0F-DE8C-4AC9-9A3D-7EDD326C6704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CA4A0F-DE8C-4AC9-9A3D-7EDD326C6704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CA4A0F-DE8C-4AC9-9A3D-7EDD326C6704}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CD943F89-D13A-49A3-8159-2D725268FE9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CD943F89-D13A-49A3-8159-2D725268FE9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD943F89-D13A-49A3-8159-2D725268FE9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -78,6 +86,10 @@ Global
 		{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A94A900-5BAF-4518-87C4-CF424BF1E11C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A94A900-5BAF-4518-87C4-CF424BF1E11C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A94A900-5BAF-4518-87C4-CF424BF1E11C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A94A900-5BAF-4518-87C4-CF424BF1E11C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,11 +103,13 @@ Global
 		{AF995500-80E4-49CD-AA29-267CC819308B} = {CC80CF82-095A-9A70-E4AA-4F39E72E717A}
 		{61841393-3188-E9D6-B5C2-EFF3A07DA07F} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{5B318AD5-C1CD-42C6-A464-E38E8AD4B274} = {61841393-3188-E9D6-B5C2-EFF3A07DA07F}
+		{27CA4A0F-DE8C-4AC9-9A3D-7EDD326C6704} = {61841393-3188-E9D6-B5C2-EFF3A07DA07F}
 		{4C762EA4-0E13-740B-DC3E-658682866858} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}
 		{36D591C7-65C7-A0D1-1CBC-10CDE441ADC8} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}
 		{36D591C7-65C7-A0D1-1CBC-10CDE441AFC8} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}
 		{CD943F89-D13A-49A3-8159-2D725268FE9F} = {36D591C7-65C7-A0D1-1CBC-10CDE441AFC8}
 		{DAB4A1CE-EB5C-9EF9-20D9-8F6147741A92} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC0}
+		{4A94A900-5BAF-4518-87C4-CF424BF1E11C} = {CC80CF82-095A-9A70-E4AA-4F39E72E717A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1B847B5A-FFF3-4059-8B39-FA5F565B5430}

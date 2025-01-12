@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package halo_of_darkness.shared.grpc.protos;
+
+option csharp_namespace = "HaloOfDarkness.Shared.Grpc.Protos";
+
+service TestGrpcService {
+    rpc TestConnected (Request) returns (Response) {}
+}
+
+message Request {
+    string name = 1;
+}
+
+message Response {
+    string message = 1;
+}
