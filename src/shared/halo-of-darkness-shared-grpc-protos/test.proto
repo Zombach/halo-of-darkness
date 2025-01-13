@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package halo_of_darkness.shared.grpc.protos;
+package HaloOfDarkness.Shared.Grpc.Protos;
 
 option csharp_namespace = "HaloOfDarkness.Shared.Grpc.Protos";
 

@@ -1,5 +1,8 @@
+using System.Net;
 using System.Text;
 using HaloOfDarkness.Server.Configuration;
+using HaloOfDarkness.Server.Infrastructure.GrpcServices;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using ILogger = Serilog.ILogger;
 
 ILogger? logger = default;
@@ -13,6 +16,22 @@ try
                       ?? "development";
 
     var builder = WebApplication.CreateBuilder(args);
+
+    builder.WebHost.ConfigureKestrel(options =>
+    {
+        var httpPort = 5000;
+        var grpcPort = 5001;
+
+        options.Listen(
+            IPAddress.Any,
+            httpPort,
+            listenOptions => listenOptions.Protocols = HttpProtocols.Http1);
+
+        options.Listen(
+            IPAddress.Any,
+            grpcPort,
+            listenOptions => listenOptions.Protocols = HttpProtocols.Http2);
+    });
 
     builder.Configuration.AddConfiguration(environment);
 
@@ -29,12 +48,22 @@ try
     services.AddSwaggerGen();
     services.AddControllers();
 
+    services.AddGrpc();
+    services.AddGrpcServer(builder.Configuration);
+
     var app = builder.Build();
     app.UseMiddleware();
 
     app.MapControllers();
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    app.UseRouting();
+    app.MapGrpcService<TestService>();
+    //app.UseEndpoints(x =>
+    //{
+    //    x.MapGrpcService<TestService>();
+    //});
     await app.RunAsync();
 }
 catch (Exception exception)
