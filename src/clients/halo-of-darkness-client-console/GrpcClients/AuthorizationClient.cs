@@ -13,7 +13,7 @@ internal sealed class AuthorizationClient(Uri url)
         return (channel, client);
     })
 {
-    public async Task<Response> Registration(string message)
+    public async Task<Response> TestConnected(string message)
     {
         var response = await Client.TestConnectedAsync(new Request { Name = message });
 
