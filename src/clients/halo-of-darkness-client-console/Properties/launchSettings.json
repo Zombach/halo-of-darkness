@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "halo-of-darkness-client-console": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

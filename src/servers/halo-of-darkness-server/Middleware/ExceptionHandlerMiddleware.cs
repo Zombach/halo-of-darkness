@@ -17,57 +17,63 @@ internal sealed class ExceptionHandlerMiddleware(ILogger<ExceptionHandlerMiddlew
 
     public async Task InvokeAsync(HttpContext context, RequestDelegate next)
     {
+        BaseException? baseException = default;
         try
         {
             await next.Invoke(context);
         }
         catch (BadRequestException exception)
         {
-            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+            baseException = exception;
         }
         catch (ForbiddenException exception)
         {
-            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+            baseException = exception;
         }
         catch (InternalServerErrorException exception)
         {
-            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+            baseException = exception;
         }
         catch (InvalidOperationException exception)
         {
-            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+            baseException = exception;
         }
         catch (NotFoundException exception)
         {
-            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+            baseException = exception;
         }
         catch (OriginIsUnreachableException exception)
         {
-            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+            baseException = exception;
         }
         catch (RequestTimeOutException exception)
         {
-            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+            baseException = exception;
         }
         catch (ServiceUnavailableException exception)
         {
-            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+            baseException = exception;
         }
         catch (UnauthorizedException exception)
         {
-            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+            baseException = exception;
         }
         catch (UnprocessableEntityException exception)
         {
-            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+            baseException = exception;
         }
         catch (ValidationException exception)
         {
-            await HandleExceptionMessageAsync(context, exception).ConfigureAwait(false);
+            baseException = exception;
         }
         catch (Exception exception)
         {
-            await HandleExceptionMessageAsync(context, new InternalServerErrorException(exception.Message, exception)).ConfigureAwait(false);
+            baseException = new InternalServerErrorException(exception.Message, exception);
+        }
+
+        if (baseException is not null)
+        {
+            await HandleExceptionMessageAsync(context, baseException).ConfigureAwait(false);
         }
     }
 

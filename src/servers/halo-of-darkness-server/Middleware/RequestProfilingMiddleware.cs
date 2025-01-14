@@ -6,7 +6,7 @@ namespace HaloOfDarkness.Server.Middleware;
 
 internal sealed class RequestProfilingMiddleware(
     ILogger<RequestProfilingMiddleware> logger,
-    IOptionsSnapshot<DelayLogRequestOptions> options)
+    IOptionsSnapshot<RequestProfilingOptions> options)
     : IMiddleware
 {
     public async Task InvokeAsync(HttpContext context, RequestDelegate next)

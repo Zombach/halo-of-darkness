@@ -1,7 +1,7 @@
 using System.Net;
 using System.Text;
 using HaloOfDarkness.Server.Configuration;
-using HaloOfDarkness.Server.Infrastructure.GrpcServices;
+using HaloOfDarkness.Server.Infrastructure;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using ILogger = Serilog.ILogger;
 
@@ -45,11 +45,12 @@ try
     services.AddOptions(builder.Configuration);
     services.AddMiddlewares();
     services.AddRouting(options => options.LowercaseUrls = true);
+
     services.AddSwaggerGen();
     services.AddControllers();
 
     services.AddGrpc();
-    services.AddGrpcServer(builder.Configuration);
+    services.AddInfrastructure(builder.Configuration);
 
     var app = builder.Build();
     app.UseMiddleware();
@@ -58,12 +59,8 @@ try
     app.UseSwagger();
     app.UseSwaggerUI();
 
+    app.UseInfrastructure();
     app.UseRouting();
-    app.MapGrpcService<TestService>();
-    //app.UseEndpoints(x =>
-    //{
-    //    x.MapGrpcService<TestService>();
-    //});
     await app.RunAsync();
 }
 catch (Exception exception)

@@ -65,7 +65,7 @@ internal static class DependencyInjection
         IConfiguration configuration
     )
     {
-        services.AddOptionsWithValidate<DelayLogRequestOptions>(configuration.GetSection(DelayLogRequestOptions.SectionKey));
+        services.AddOptionsWithValidate<RequestProfilingOptions>(configuration.GetSection(RequestProfilingOptions.SectionKey));
 
         return services;
     }

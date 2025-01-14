@@ -2,19 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <RootNamespace>HaloOfDarkness.Server.Infrastructure</RootNamespace>
+    <RootNamespace>HaloOfDarkness.Server.Grpc.Services</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Grpc.AspNetCore" Version="2.67.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\halo-of-darkness-server-grpc-services\halo-of-darkness-server-grpc-services.csproj" />
+    <ProjectReference Include="..\..\shared\halo-of-darkness-shared-grpc-protos\halo-of-darkness-shared-grpc-protos.csproj" />
   </ItemGroup>
 
 </Project>

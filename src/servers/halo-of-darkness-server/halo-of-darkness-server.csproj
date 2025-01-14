@@ -8,6 +8,7 @@
     <UserSecretsId>ff946f31-b3bc-4738-8188-e84a8ee6942b</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..</DockerfileContext>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +29,7 @@
     <ProjectReference Include="..\..\shared\halo-of-darkness-shared-exceptions\halo-of-darkness-shared-exceptions.csproj" />
     <ProjectReference Include="..\..\shared\halo-of-darkness-shared-grpc-protos\halo-of-darkness-shared-grpc-protos.csproj" />
     <ProjectReference Include="..\halo-of-darkness-server-configuration\halo-of-darkness-server-configuration.csproj" />
+    <ProjectReference Include="..\halo-of-darkness-server-grpc-services\halo-of-darkness-server-grpc-services.csproj" />
     <ProjectReference Include="..\halo-of-darkness-server-infrastructure\halo-of-darkness-server-infrastructure.csproj" />
   </ItemGroup>
 

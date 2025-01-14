@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package HaloOfDarkness.Shared.Grpc.Protos.User;
+
+option csharp_namespace = "HaloOfDarkness.Shared.Grpc.Protos.User.Authorization";
+
+service AuthorizationGrpcService {
+    rpc TestConnected (Request) returns (Response) { }
+}
+
+message Request {
+    string name = 1;
+}
+
+message Response {
+    string message = 1;
+}
