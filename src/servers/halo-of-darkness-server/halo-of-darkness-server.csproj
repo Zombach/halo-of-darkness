@@ -28,11 +28,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\aspire\service-defaults\service-defaults.csproj" />
     <ProjectReference Include="..\..\shared\halo-of-darkness-shared-exceptions\halo-of-darkness-shared-exceptions.csproj" />
     <ProjectReference Include="..\..\shared\halo-of-darkness-shared-grpc-protos\halo-of-darkness-shared-grpc-protos.csproj" />
     <ProjectReference Include="..\halo-of-darkness-server-configuration\halo-of-darkness-server-configuration.csproj" />
     <ProjectReference Include="..\halo-of-darkness-server-grpc-services\halo-of-darkness-server-grpc-services.csproj" />
     <ProjectReference Include="..\halo-of-darkness-server-infrastructure\halo-of-darkness-server-infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="logs\" />
   </ItemGroup>
 
 </Project>

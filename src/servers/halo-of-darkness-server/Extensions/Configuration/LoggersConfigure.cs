@@ -30,4 +30,12 @@ internal static class LoggersConfigure
 
         firstLogger = loggers.First();
     }
+
+    public static void AddLoggers(
+        this ConfigureHostBuilder host,
+        ILogger logger)
+    {
+        Log.Logger = logger;
+        host.UseSerilog();
+    }
 }

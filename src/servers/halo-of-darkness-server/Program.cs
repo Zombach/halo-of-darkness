@@ -1,6 +1,8 @@
 using HaloOfDarkness.Server.Configuration;
 using HaloOfDarkness.Server.Extensions;
 using HaloOfDarkness.Server.Extensions.Configuration;
+using Serilog;
+using ServiceDefaults;
 
 Serilog.ILogger? logger = null;
 try
@@ -11,8 +13,15 @@ try
                       ?? "development";
 
     var builder = WebApplication.CreateBuilder(args);
+    // Add service defaults & Aspire client integrations.
+    builder.AddServiceDefaults();
     builder.Configuration.AddConfigurations(environment);
     builder.BuilderConfigure(out var defaultLogger);
+
+    var host = builder.Host;
+    host.AddLoggers(defaultLogger);
+    host.UseSerilog();
+    //host.ConfigureKeycloakConfigurationSource("keycloak.json");
 
     logger = defaultLogger.ForContext<Program>();
     logger.Information("environment: {@environment}", environment);
@@ -37,4 +46,5 @@ catch (Exception exception)
 finally
 {
     logger!.Information("finish");
+    await Log.CloseAndFlushAsync();
 }

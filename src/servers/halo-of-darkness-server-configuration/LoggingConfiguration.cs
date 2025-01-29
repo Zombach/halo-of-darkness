@@ -25,9 +25,13 @@ public static class LoggingConfiguration
 
     public static ILogger CreateDefaultLogger()
     {
+        const string template = "[{Level:u4}] |{SourceContext,30}({EventId})| {Message:lj}{NewLine}{Exception}";
+
         var logger = new LoggerConfiguration()
+            .MinimumLevel.Verbose()
             .WriteTo.Console(
-                LogEventLevel.Debug,
+                restrictedToMinimumLevel: LogEventLevel.Debug,
+                outputTemplate: template,
                 formatProvider: new CultureInfo(CultureInfo.CurrentCulture.Name))
             .CreateBootstrapLogger();
 
