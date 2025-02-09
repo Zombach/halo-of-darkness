@@ -2,7 +2,7 @@ using FluentAssertions;
 using HaloOfDarkness.UnitTests.Abstraction.Impl;
 using HaloOfDarkness.UnitTests.Abstraction.SupportedOs;
 
-namespace HaloOfDarkness.UnitTests.Abstraction.Example;
+namespace HaloOfDarkness.Shared.Exceptions.Tests;
 
 public sealed class ExampleSharedTests
 {

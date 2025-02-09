@@ -1,7 +1,7 @@
 using System.Net;
 using FluentAssertions;
 using HaloOfDarkness.Shared.Exceptions.Common;
-using HaloOfDarkness.Shared.Exceptions.Tests.Configuration;
+using HaloOfDarkness.UnitTests.Abstraction.Impl;
 
 namespace HaloOfDarkness.Shared.Exceptions.Tests;
 
