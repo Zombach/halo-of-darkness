@@ -68,6 +68,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app-host", "src\aspire\app-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "service-defaults", "src\aspire\service-defaults\service-defaults.csproj", "{A6B75DA9-A0D5-4260-AE73-E480F3BBD0FE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{7B842D42-86CB-4D44-8A1D-2C96C9998F7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halo-of-darkness-unit-tests-abstraction", "tests\common\halo-of-darkness-unit-tests-abstraction\halo-of-darkness-unit-tests-abstraction.csproj", "{4DD30EA8-494E-4271-AEF3-FD5A66931E7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halo-of-darkness-integration-tests-abstraction", "tests\common\halo-of-darkness-integration-tests-abstraction\halo-of-darkness-integration-tests-abstraction.csproj", "{C9FECD20-2A9B-4F99-9270-5AFD129274E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "halo-of-darkness-functional-tests-abstraction", "tests\common\halo-of-darkness-functional-tests-abstraction\halo-of-darkness-functional-tests-abstraction.csproj", "{A25B49F1-DEE6-4261-B73F-9D7A858B0A84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -122,6 +130,18 @@ Global
 		{A6B75DA9-A0D5-4260-AE73-E480F3BBD0FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6B75DA9-A0D5-4260-AE73-E480F3BBD0FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6B75DA9-A0D5-4260-AE73-E480F3BBD0FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD30EA8-494E-4271-AEF3-FD5A66931E7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD30EA8-494E-4271-AEF3-FD5A66931E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD30EA8-494E-4271-AEF3-FD5A66931E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD30EA8-494E-4271-AEF3-FD5A66931E7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9FECD20-2A9B-4F99-9270-5AFD129274E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9FECD20-2A9B-4F99-9270-5AFD129274E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9FECD20-2A9B-4F99-9270-5AFD129274E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9FECD20-2A9B-4F99-9270-5AFD129274E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A25B49F1-DEE6-4261-B73F-9D7A858B0A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A25B49F1-DEE6-4261-B73F-9D7A858B0A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A25B49F1-DEE6-4261-B73F-9D7A858B0A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A25B49F1-DEE6-4261-B73F-9D7A858B0A84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -148,6 +168,10 @@ Global
 		{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{A31B6C83-82D8-43CC-9BF6-64B28A8AE764} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
 		{A6B75DA9-A0D5-4260-AE73-E480F3BBD0FE} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
+		{7B842D42-86CB-4D44-8A1D-2C96C9998F7C} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDD0}
+		{4DD30EA8-494E-4271-AEF3-FD5A66931E7D} = {7B842D42-86CB-4D44-8A1D-2C96C9998F7C}
+		{C9FECD20-2A9B-4F99-9270-5AFD129274E2} = {7B842D42-86CB-4D44-8A1D-2C96C9998F7C}
+		{A25B49F1-DEE6-4261-B73F-9D7A858B0A84} = {7B842D42-86CB-4D44-8A1D-2C96C9998F7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1B847B5A-FFF3-4059-8B39-FA5F565B5430}

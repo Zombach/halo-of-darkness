@@ -2,22 +2,34 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <RootNamespace>HaloOfDarkness.Shared.Exceptions.Tests</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <IsPackable>false</IsPackable>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Zyfra.ZIF.Security.Api.Tests</RootNamespace>
+    <!--
+        To enable the Microsoft Testing Platform 'dotnet test' experience, add property:
+          <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+
+        To enable the Microsoft Testing Platform native command line experience, add property:
+          <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
+
+        For more information on Microsoft Testing Platform support in xUnit.net, please visit:
+          https://xunit.net/docs/getting-started/v3/microsoft-testing-platform
+        -->
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoFixture.Xunit2" Version="5.0.0-preview0012" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit.v3" Version="1.1.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="FluentAssertions" Version="[7.1.0]" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
-    <PackageReference Include="xunit" Version="2.9.3" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="3.0.1">
+    <PackageReference Include="coverlet.msbuild" Version="6.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -25,6 +37,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\shared\halo-of-darkness-shared-exceptions\halo-of-darkness-shared-exceptions.csproj" />
+    <ProjectReference Include="..\..\common\halo-of-darkness-unit-tests-abstraction\halo-of-darkness-unit-tests-abstraction.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\common\halo-of-darkness-unit-tests-abstraction\AssemblyInfo.cs" Link="AssemblyInfo.cs" />
+    <Compile Include="..\..\common\halo-of-darkness-unit-tests-abstraction\Example\ExampleSharedUnitTests.cs" Link="Example\ExampleSharedUnitTests.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,3 +50,4 @@
   </ItemGroup>
 
 </Project>
+

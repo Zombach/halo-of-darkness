@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>HaloOfDarkness.UnitTests.Abstraction</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoFixture.AutoMoq" Version="5.0.0-preview0012" />
+    <PackageReference Include="AutoFixture.Xunit3" Version="5.0.0-preview0012" />
+    <PackageReference Include="FluentAssertions" Version="[7.1.0]" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="xunit.analyzers" Version="1.20.0" />
+    <PackageReference Include="xunit.v3.extensibility.core" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="xunit.runner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+</Project>
