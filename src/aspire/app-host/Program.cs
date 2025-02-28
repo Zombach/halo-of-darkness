@@ -8,7 +8,9 @@ var portResource = builder.AddParameterFromConfiguration("Port", "KeycloakOption
 var port = int.Parse(portResource.Resource.Value, CultureInfo.CurrentCulture);
 
 var keycloak = builder.AddKeycloak("keycloak", port, username, password)
-    .WithImageTag("latest");
+    .WithImageTag("latest")
+    .WithDataVolume()
+    .WithRealmImport("./Realms"); ;
 
 var apiService = builder.AddProject<Projects.halo_of_darkness_server>("HaloOfDarknessServer")
     .WithReference(keycloak)

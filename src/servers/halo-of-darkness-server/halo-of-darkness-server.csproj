@@ -12,6 +12,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Aspire.Keycloak.Authentication" Version="9.0.0-preview.5.24551.3" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.67.0" />
     <PackageReference Include="Keycloak.AuthServices.Authentication" Version="2.6.0" />
     <PackageReference Include="Keycloak.AuthServices.Authorization" Version="2.6.0" />

@@ -15,6 +15,8 @@ try
     var builder = WebApplication.CreateBuilder(args);
     // Add service defaults & Aspire client integrations.
     builder.AddServiceDefaults();
+    // Add services to the container.
+    builder.Services.AddProblemDetails();
     builder.Configuration.AddConfigurations(environment);
     builder.BuilderConfigure(out var defaultLogger);
 
@@ -27,6 +29,17 @@ try
     logger.Information("environment: {@environment}", environment);
 
     builder.Services.AddServices(builder.Configuration);
+    builder.Services.AddAuthentication()
+        .AddKeycloakJwtBearer(
+            serviceName: "keycloak",
+            realm: "WeatherShop",
+            configureOptions: options =>
+            {
+                options.RequireHttpsMetadata = false;
+                options.Audience = "weather.api";
+            });
+
+    builder.Services.AddAuthorizationBuilder();
 
     var app = builder.Build();
     app.UseApplication();

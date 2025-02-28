@@ -91,8 +91,8 @@ internal static class DependencyInjection
         application.UseAuthentication();
         application.UseAuthorization();
 
-        application.MapControllers();
-        //application.UseEndpoints(options => options.MapControllers());
+        application.MapControllers()
+            .RequireAuthorization();
 
         return application;
     }
