@@ -47,9 +47,6 @@ updates:
         patterns:
           - "Microsoft.NET.Test*"
           - "xunit*"
-      Fluent:
-        patterns:
-          - "Fluent*"
       All:
         patterns:
           - "*"
