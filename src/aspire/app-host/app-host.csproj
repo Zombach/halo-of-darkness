@@ -13,11 +13,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.1.0" />
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="13.0.0" />
     <PackageReference Include="Aspire.Hosting.Keycloak" Version="9.1.0-preview.1.25121.10" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Grpc.Tools" Version="2.76.0" />
     <ProjectReference Include="..\..\servers\halo-of-darkness-server\halo-of-darkness-server.csproj" />
   </ItemGroup>
 
