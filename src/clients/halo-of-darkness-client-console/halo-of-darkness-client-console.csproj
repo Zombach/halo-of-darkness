@@ -14,7 +14,7 @@
     <PackageReference Include="Aspire.Keycloak.Authentication" Version="9.1.0-preview.1.25121.10" />
     <PackageReference Include="Grpc.Net.Client" Version="2.70.0-pre1" />
     <PackageReference Include="Grpc.Net.ClientFactory" Version="2.70.0-pre1" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.0-preview.1.25080.5" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.2" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.2" />
   </ItemGroup>
 
