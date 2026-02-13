@@ -19,11 +19,11 @@
 
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.76.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.2" />
-  <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.2" />
-  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.2" />
-  <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.2" />
-  <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.3" />
+  <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.3" />
+  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.3" />
+  <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.3" />
+  <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.3" />
     <ProjectReference Include="..\..\servers\halo-of-darkness-server\halo-of-darkness-server.csproj" />
   </ItemGroup>
 
