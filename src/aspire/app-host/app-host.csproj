@@ -19,11 +19,14 @@
 
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.83.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.10" />
-  <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.10" />
-  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.10" />
-  <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.10" />
-  <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.10" />
+    <PackageReference Include="Grpc.Tools" Version="2.84.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.12" />
+  <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.12" />
+  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.12" />
+  <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.12" />
+  <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.12" />
+  <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.18.0" />
+  <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.18.0" />
     <ProjectReference Include="..\..\servers\halo-of-darkness-server\halo-of-darkness-server.csproj" />
   </ItemGroup>
 
