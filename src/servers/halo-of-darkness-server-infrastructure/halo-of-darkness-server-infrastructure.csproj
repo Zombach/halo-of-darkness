@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Grpc.Tools" Version="2.84.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.85.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.13" />
     <ProjectReference Include="..\halo-of-darkness-server-application\halo-of-darkness-server-application.csproj" />
     <ProjectReference Include="..\halo-of-darkness-server-grpc-services\halo-of-darkness-server-grpc-services.csproj" />
